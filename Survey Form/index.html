@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">My Survey Form</h1>
+            <p id="description"class="text-center">Please answer all the questions</p>
+        </header>
+
+        <form id="survey-form">
+            <!--name-->
+            <div class="form-group">
+                <label id="name-label"for="name" class="mylabel">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter name" required>
+            </div>
+
+            <!--email-->
+            <div class="form-group">
+                <label id="email-label" for="email" class="mylabel">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter email" required>
+            </div>
+
+            <!--Age-->
+            <div class="form-group">
+                <label id="number-label"for="number" class="mylabel">Age</label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Enter age">
+            </div>
+
+            <!--dropdown-->
+            <div class="form-group">
+                <p>What is your favourite genre?</p>
+                <select name="genre" id="dropdown" class="form-control" required>
+                    <option value="metal">Metal</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="blues">Blues</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!--radio button-->
+            <div class="form-group">
+                <p>Will you recommend your favourite genre to a friend?</p>
+                <label>
+                   <input type="radio" name="attribute" id="definitely" class="input-radio "checked>Definitely
+                </label>
+                <label>
+                    <input type="radio" name="attribute" id="maybe" class="input-radio">Maybe
+                </label>
+                <label>
+                    <input type="radio" name="attribute" id="no" class="input-radio">No
+                </label>
+
+            </div>
+
+            <!--checkbox-->
+            <div class="form-group">
+                <p>Which of these instruments do you like to learn?</p>
+
+                <label>
+                    <input type="checkbox" name="instruments" id="guitar" value="guitar">Guitar
+                </label>
+
+                <label>
+                    <input type="checkbox" name="instruments" id="drum" value="drum">Drum
+                </label>
+
+                <label>
+                    <input type="checkbox" name="instruments" id="keyboard" value="keyboard">Keyboard
+                </label>
+                
+            </div>
+
+            <div class="form-group">
+                <p>Your suggestions on today's music?</p>
+
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+
+        </form>
+    </div>
+    
+</body>
+</html>
